@@ -1,0 +1,53 @@
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+
+.footer {
+	padding-block: 5rem 1.5rem;
+	background: #f0f0f0;
+
+	@include breakpoint-down(mobile) {
+		padding-top: 3rem;
+	}
+
+	h5 {
+		text-transform: uppercase;
+		margin-bottom: 2rem;
+	}
+
+	.footer__copyright {
+		margin-top: 5rem;
+		text-align: center;
+		font-size: 1.4rem;
+	}
+
+	.footer__logo {
+		display: inline-block;
+		vertical-align: middle;
+
+		@include breakpoint-down(tablet) {
+			width: 150px;
+		}
+
+		@include breakpoint-down(mobile) {
+			display: block;
+			margin: 0 auto 3rem;
+		}
+	}
+
+	.footer__cols {
+		@include breakpoint-down(mobile) {
+			display: block;
+		}
+	}
+
+	.footer__cols .footer__col {
+		@include breakpoint-down(tablet) {
+			flex: 0 0 calc(100% / 2);
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 3rem;
+		}
+	}
+}

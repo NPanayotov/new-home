@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+	Callout
+\* ------------------------------------------------------------ */
+
+.callout {
+	background: $c-primary;
+	color: #fff;
+	padding-block: 2.5rem;
+
+	.callout__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include breakpoint-down(mobile) {
+			display: block;
+		}
+	}
+
+	.callout__content {
+		@include breakpoint-down(mobile) {
+			margin-bottom: 2rem;
+		}
+	}
+}

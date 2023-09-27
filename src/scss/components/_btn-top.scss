@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	Btn-top
+\* ------------------------------------------------------------ */
+
+.btn-top {
+	display: inline-block;
+	width: 5rem;
+	height: 5rem;
+	text-align: center;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, .5);
+	line-height: 5rem;
+	color: #fff;
+	font-size: 3rem;
+	transition: background .3s;
+
+	@media (hover: hover) {
+		&:where(:hover, :focus-visible) {
+			background: #000;
+		}
+	}
+}

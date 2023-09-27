@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ *\
+	list-contacts
+\* ------------------------------------------------------------ */
+
+.list-contacts {
+	list-style: none;
+
+	figure,
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	li + li {
+		margin-top: 1.5rem;
+	}
+
+	figure {
+		font-size: 1.6rem;
+		min-width: 1.8rem;
+		text-align: center;
+		color: $c-primary;
+		margin-right: 1rem;
+	}
+
+	span {
+		margin-top: -4px;
+	}
+}

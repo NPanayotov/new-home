@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------ *\
+	Socials
+\* ------------------------------------------------------------ */
+
+.socials {
+	ul {
+		list-style: none;
+	}
+
+	font-size: 3rem;
+
+	a {
+		display: inline-block;
+		transition: scale .3s;
+
+		&:where(:hover, :focus-visible) {
+			scale: 1.1;
+		}
+	}
+
+	.fa-facebook {
+		color: #4267B2;
+	}
+}

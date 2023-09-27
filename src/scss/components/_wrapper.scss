@@ -1,0 +1,21 @@
+/* ------------------------------------------------------------ *\
+	Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper {
+	position: relative;
+	min-height: 100vh;
+	padding-top: 7rem;
+
+	.wrapper__actions {
+		position: fixed;
+		bottom: 3rem;
+		right: 3rem;
+		translate: 0 10rem;
+		transition: translate .3s;
+	}
+
+	.wrapper__actions.is-visible {
+		translate: 0;
+	}
+}

@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	appearance: none;
+	padding: 2rem 3rem;
+	border-radius: 0.3rem;
+}
+
+.btn--white {
+	background: #fff;
+	color: $c-base;
+	transition: background .3s;
+
+	@media (hover: hover) {
+		&:where(:hover, :focus-visible) {
+			background: #dedede;
+		}
+	}
+}
+
+/*  Btn block  */
+
+.btn--block {
+	display: block;
+	padding-left: 0;
+	padding-right: 0;
+}

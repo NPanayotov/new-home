@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------ *\
+	Header
+\* ------------------------------------------------------------ */
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	padding: 1rem 0;
+	box-shadow: 0 2px 4px rgba(0,0,0, .2);
+	background: #fff;
+
+	.header__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

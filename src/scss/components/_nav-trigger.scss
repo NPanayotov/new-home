@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------ *\
+	nav-trigger
+\* ------------------------------------------------------------ */
+
+.nav-trigger {
+	display: none;
+
+	@include breakpoint-down(mobile) {
+		display: inline-block;
+		width: 4rem;
+		height: 4rem;
+		position: relative;
+	}
+
+	span {
+		position: absolute;
+		right: 0;
+		height: 3px;
+		width: 100%;
+		background: #000;
+		transition: top .3s .3s, opacity .1s .1s, rotate .3s 0s;
+	}
+
+	span:nth-child(1) {
+		top: 12px;
+	}
+
+	span:nth-child(2) {
+		top: 20px;
+	}
+
+	span:nth-child(3) {
+		top: 28px;
+	}
+
+
+	&.is-active {
+
+		span {
+			transition: top .3s, opacity .1s .3s, rotate .3s .3s;
+		}
+
+		span:nth-child(1),
+		span:nth-child(3) {
+			top: 20px;
+		}
+
+		span:nth-child(1) {
+			rotate: -45deg
+		}
+
+		span:nth-child(2) {
+			opacity: 0;
+		}
+
+		span:nth-child(3) {
+			rotate: 45deg
+		}
+	}
+}

@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------ *\
+	Section
+\* ------------------------------------------------------------ */
+
+.section {
+	padding-block: 5rem;
+
+	@include breakpoint-down(mobile) {
+		padding-block: 3rem;
+	}
+
+	.section__content {
+		@include breakpoint-down(mobile) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.section__image {
+		border-radius: 1rem;
+		overflow: hidden;
+	}
+
+	.section__image img {
+		width: 100%;
+		height: auto;
+	}
+}

@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\
+	Feature
+\* ------------------------------------------------------------ */
+
+.features {
+	margin-block: 5rem;
+
+	@include breakpoint-down(tablet) {
+		margin-bottom: 1rem;
+	}
+}
+
+.feature {
+	text-align: center;
+
+	@include breakpoint-down(tablet) {
+		margin-bottom: 4rem;
+	}
+
+	figure {
+		display: inline-block;
+		vertical-align: middle;
+		width: 12rem;
+		height: 12rem;
+		background: $c-primary;
+		border-radius: 1rem;
+		color: #fff;
+		font-size: 6rem;
+		line-height: 12rem;
+		margin-bottom: 2rem;
+	}
+}
