@@ -441,6 +441,23 @@ blockquote:last-child {
 	Components
 \* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ *\
+	Animations
+\* ------------------------------------------------------------ */
+.animate-in {
+  --t-delay: 0s;
+  --t-speed: 0.4s;
+  --ainmateX: 0;
+  --animateY: 10rem;
+  opacity: 0;
+  translate: var(--ainmateX) var(--animateY);
+  transition: opacity var(--t-speed), translate var(--t-speed);
+  transition-delay: var(--t-delay);
+}
+.animate-in.is-animated {
+  opacity: 1;
+  translate: none;
+}
+/* ------------------------------------------------------------ *\
 	Breadcrumbs
 \* ------------------------------------------------------------ */
 .breadcrumbs {

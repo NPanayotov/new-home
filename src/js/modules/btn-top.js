@@ -1,4 +1,4 @@
-import { $window } from '../utils/globals'
+import { $window } from '../utils/globals';
 
 
 $window.on('scroll load', () => {
