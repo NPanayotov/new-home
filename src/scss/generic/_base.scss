@@ -27,6 +27,7 @@ a {
 
 	&[href^="tel"] {
 		text-decoration: none;
+		cursor: pointer;
 	}
 }
 

@@ -207,6 +207,7 @@ a:hover {
 }
 a[href^=tel] {
   text-decoration: none;
+  cursor: pointer;
 }
 .h1,
 h1,
@@ -299,6 +300,9 @@ blockquote:last-child {
 /* ------------------------------------------------------------ *\
   Helpers
 \* ------------------------------------------------------------ */
+.fa-facebook {
+  color: #4267B2;
+}
 .has-underline {
   margin-bottom: 3rem;
 }
@@ -437,6 +441,36 @@ blockquote:last-child {
 	Components
 \* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ *\
+	Breadcrumbs
+\* ------------------------------------------------------------ */
+.breadcrumbs {
+  padding-block: 2rem;
+}
+.breadcrumbs ol {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.breadcrumbs li + li {
+  position: relative;
+}
+.breadcrumbs li + li:before {
+  content: "/";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  margin-right: 0.6rem;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  color: #ca4852;
+}
+@media (hover: hover) {
+  .breadcrumbs a:where(:hover, :focus-visible) {
+    text-decoration: underline;
+  }
+}
+/* ------------------------------------------------------------ *\
 	Btn-top
 \* ------------------------------------------------------------ */
 .btn-top {
@@ -468,15 +502,26 @@ blockquote:last-child {
   appearance: none;
   padding: 2rem 3rem;
   border-radius: 0.3rem;
+  transition: background 0.3s;
 }
 .btn--white {
   background: #fff;
   color: #3d3d3d;
-  transition: background 0.3s;
 }
 @media (hover: hover) {
   .btn--white:where(:hover, :focus-visible) {
     background: #dedede;
+  }
+}
+.btn--dark {
+  background: #3d3d3d;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+@media (hover: hover) {
+  .btn--dark:where(:hover, :focus-visible) {
+    background: #000;
   }
 }
 /*  Btn block  */
@@ -540,6 +585,22 @@ blockquote:last-child {
   margin-bottom: 2rem;
 }
 /* ------------------------------------------------------------ *\
+	Field
+\* ------------------------------------------------------------ */
+.field {
+  width: 100%;
+  height: 4.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 2rem;
+  box-shadow: none;
+}
+.field.field--textarea {
+  padding: 2rem;
+  height: 10rem;
+  resize: vertical;
+}
+/* ------------------------------------------------------------ *\
 	Footer
 \* ------------------------------------------------------------ */
 .footer {
@@ -591,6 +652,29 @@ blockquote:last-child {
   }
 }
 /* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+.form {
+  background: #eff4f4;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+@media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
+  .form {
+    padding: 1.5rem;
+  }
+}
+.form .form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form .form__row ~ .form__row {
+  margin-top: 2rem;
+}
+.form .form__body {
+  margin-bottom: 2rem;
+}
+/* ------------------------------------------------------------ *\
 	Grid
 \* ------------------------------------------------------------ */
 .grid {
@@ -623,6 +707,16 @@ blockquote:last-child {
 @media (max-width: 1023px) {
   .grid .grid__col--1of4 {
     flex: 0 0 50%;
+  }
+}
+@media (max-width: 1023px) {
+  .grid .grid__col--tablet-full {
+    flex: 0 0 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .grid .grid__col--tablet-full ~ .grid__col--tablet-full {
+    margin-top: 2rem;
   }
 }
 /* ------------------------------------------------------------ *\
@@ -688,6 +782,24 @@ blockquote:last-child {
     display: none;
   }
 }
+/*  Hero small  */
+.hero--small {
+  min-height: 35vh;
+}
+.hero--small .hero__image:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero--small .hero__content {
+  background: none;
+  text-align: center;
+  max-width: 100%;
+}
+.hero--small h1 {
+  margin: 0;
+}
 /* ------------------------------------------------------------ *\
 	list-contacts
 \* ------------------------------------------------------------ */
@@ -712,6 +824,10 @@ blockquote:last-child {
 .list-contacts span {
   margin-top: -4px;
 }
+.list-contacts--large figure {
+  font-size: 3rem;
+  min-width: 3.6rem;
+}
 /* ------------------------------------------------------------ *\
 	Logo
 \* ------------------------------------------------------------ */
@@ -724,6 +840,22 @@ blockquote:last-child {
 .logo img {
   width: 100%;
   height: auto;
+}
+/* ------------------------------------------------------------ *\
+	Map
+\* ------------------------------------------------------------ */
+.map {
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 /* ------------------------------------------------------------ *\
 	nav-trigger
@@ -821,8 +953,10 @@ blockquote:last-child {
     display: block;
   }
 }
-.nav li + li {
-  margin-top: 3px;
+@media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
+  .nav li + li {
+    margin-top: 3px;
+  }
 }
 .nav a {
   display: inline-block;
@@ -883,6 +1017,9 @@ blockquote:last-child {
   width: 100%;
   height: auto;
 }
+.section--no-pt {
+  padding-top: 0;
+}
 /* ------------------------------------------------------------ *\
   Shell
 \* ------------------------------------------------------------ */
@@ -912,9 +1049,6 @@ blockquote:last-child {
 }
 .socials a:where(:hover, :focus-visible) {
   scale: 1.1;
-}
-.socials .fa-facebook {
-  color: #4267B2;
 }
 /* ------------------------------------------------------------ *\
 	Wrapper
