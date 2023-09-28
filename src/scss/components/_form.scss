@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+
+.form {
+	background: #eff4f4;
+	padding: 3rem;
+	border-radius: 1rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 1.5rem;
+	}
+
+	.form__label {
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.form__row ~ .form__row {
+		margin-top: 2rem;
+	}
+
+	.form__body {
+		margin-bottom: 2rem;
+	}
+}

@@ -35,4 +35,17 @@
 			flex: 0 0 calc(100% / 2);
 		}
 	}
+
+	.grid__col--tablet-full {
+		@include breakpoint-down(tablet) {
+			flex: 0 0 100%;
+		}
+	}
+
+
+	.grid__col--tablet-full ~ .grid__col--tablet-full {
+		@include breakpoint-down(tablet) {
+			margin-top: 2rem;
+		}
+	}
 }

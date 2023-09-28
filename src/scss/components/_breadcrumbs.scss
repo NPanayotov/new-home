@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------ *\
+	Breadcrumbs
+\* ------------------------------------------------------------ */
+
+.breadcrumbs {
+	padding-block: 2rem;
+
+	ol {
+		list-style: none;
+		display: flex;
+		gap: 2rem;
+	}
+
+	li + li {
+		position: relative;
+	}
+
+	li + li:before {
+		content: '/';
+		position: absolute;
+		top: 0;
+		right: 100%;
+		margin-right: 0.6rem;
+	}
+
+	a {
+		text-decoration: none;
+		color: $c-primary;
+
+
+		@media (hover: hover) {
+			&:where(:hover, :focus-visible) {
+				text-decoration: underline;
+			}
+		}
+	}
+}

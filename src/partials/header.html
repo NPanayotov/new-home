@@ -15,20 +15,20 @@
 
 			<nav class="nav">
 				<ul>
-					<li class="is-active">
-						<a href="#">Начало</a>
+					<li class="{{#if active_home}}is-active{{/if}}">
+						<a href="/">Начало</a>
 					</li>
 
-					<li>
+					<li class="{{#if active_new}}is-active{{/if}}">
 						<a href="#">Нов обект</a>
 					</li>
 
-					<li>
+					<li class="{{#if active_kasiopea}}is-active{{/if}}">
 						<a href="#">Касиопея парк</a>
 					</li>
 
-					<li>
-						<a href="#">Контакти</a>
+					<li class="{{#if active_contact}}is-active{{/if}}">
+						<a href="contact.html">Контакти</a>
 					</li>
 				</ul>
 			</nav><!-- /.nav -->

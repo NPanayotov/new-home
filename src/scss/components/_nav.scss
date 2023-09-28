@@ -52,7 +52,9 @@
 	}
 
 	li + li {
-		margin-top: 3px;
+		@include breakpoint-down(mobile) {
+			margin-top: 3px;
+		}
 	}
 
 	a {

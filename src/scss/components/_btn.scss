@@ -11,16 +11,29 @@
 	appearance: none;
 	padding: 2rem 3rem;
 	border-radius: 0.3rem;
+	transition: background .3s;
 }
 
 .btn--white {
 	background: #fff;
 	color: $c-base;
-	transition: background .3s;
 
 	@media (hover: hover) {
 		&:where(:hover, :focus-visible) {
 			background: #dedede;
+		}
+	}
+}
+
+.btn--dark {
+	background: $c-base;
+	color: #fff;
+	border: none;
+	font-weight: bold;
+
+	@media (hover: hover) {
+		&:where(:hover, :focus-visible) {
+			background: #000;
 		}
 	}
 }
