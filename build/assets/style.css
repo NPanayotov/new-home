@@ -929,7 +929,7 @@ blockquote:last-child {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #fff;
+    background: #e7e8e9;
     pointer-events: none;
     translate: -100% 0;
     transition: translate 0.3s;
@@ -999,6 +999,11 @@ blockquote:last-child {
   background: #a5bb82;
   scale: 0 1;
   transition: scale 0.3s;
+}
+@media (max-width: 1023px) {
+  .nav a:after {
+    display: none;
+  }
 }
 @media (hover: hover) {
   .nav a:where(:hover, :focus-visible),

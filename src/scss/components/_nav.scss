@@ -8,7 +8,7 @@
 		top: 100%;
 		left: 0;
 		width: 100%;
-		background: #fff;
+		background: $c-logo-bg;
 		pointer-events: none;
 		translate: -100% 0;
 		transition: translate .3s;
@@ -82,6 +82,10 @@
 		background: $c-primary;
 		scale: 0 1;
 		transition: scale .3s;
+
+		@include breakpoint-down(tablet) {
+			display: none;
+		}
 	}
 
 	@media (hover: hover) {
