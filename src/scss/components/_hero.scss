@@ -52,11 +52,9 @@
 	}
 }
 
-/*  Hero small  */
+/*  Hero alt  */
 
-.hero--small {
-	min-height: 35vh;
-
+.hero--alt {
 	.hero__image:after {
 		content: '';
 		position: absolute;
@@ -73,4 +71,15 @@
 	h1 {
 		margin: 0;
 	}
+}
+
+/*  Hero small  */
+
+.hero--small {
+	min-height: 35vh;
+}
+
+
+.hero--medium {
+	min-height: 60vh;
 }

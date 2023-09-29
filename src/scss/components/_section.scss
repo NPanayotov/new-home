@@ -20,9 +20,22 @@
 		overflow: hidden;
 	}
 
+	.section__image:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
 	.section__image img {
 		width: 100%;
 		height: auto;
+	}
+
+	.section__entry-small {
+		font-size: 1.4rem;
+		margin-bottom: 2rem;
+	}
+
+	.section__head {
+		margin-bottom: 3rem;
 	}
 }
 

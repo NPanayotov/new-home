@@ -1,0 +1,19 @@
+/* ------------------------------------------------------------ *\
+	Floor
+\* ------------------------------------------------------------ */
+
+.floor {
+	font-size: 1.4rem;
+	line-height: 1.4;
+
+	.floor__image {
+		border: 1px solid $c-primary;
+		margin-bottom: 2rem;
+		padding: 1rem;
+	}
+
+	.floor__image img {
+		aspect-ratio: 360 / 258;
+		object-fit: cover;
+	}
+}

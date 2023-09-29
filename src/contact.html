@@ -5,7 +5,7 @@
 	<div class="wrapper">
 		{{> header active_contact="true" }}
 
-		<div class="hero hero--small" id="hero">
+		<div class="hero hero--alt hero--small" id="hero">
 			<div class="hero__image">
 				<img src="assets/images/temp/hero-contact.jpg" alt="Hero image">
 			</div><!-- /.hero__image -->
@@ -34,107 +34,7 @@
 				</div><!-- /.shell -->
 			</div><!-- /.breadcrumbs -->
 
-			<section class="section section--no-pt">
-				<div class="shell">
-					<div class="grid">
-						<div class="grid__col grid__col--1of2 grid__col--tablet-full">
-							<div class="section__content">
-								<h2 class="has-underline">Свържете се с нас</h2>
-
-								<p>Използвайте най-удобния за Вас метод да се свържете с нас. Предлагаме разнообразие от комуникационни канали, на които нашите консултанти ще отговорят на всичките Ви въпроси.</p>
-
-								<ul class="list-contacts list-contacts--large">
-									<li>
-										<figure>
-											<i class="fa-solid fa-mobile-screen-button"></i>
-										</figure>
-
-										<span>
-											<a href="tel:+359887005445">+359 887 005 445</a>
-										</span>
-									</li>
-
-									<li>
-										<figure>
-											<i class="fa-solid fa-envelope-open-text"></i>
-										</figure>
-
-										<span><a href="mailto:r-grozev@abv.bg">r-grozev@abv.bg</a></span>
-									</li>
-
-									<li>
-										<figure>
-											<i class="fa-solid fa-map-location-dot"></i>
-										</figure>
-
-										<span>ул. Македония 29А, Варна</span>
-									</li>
-
-									<li>
-										<figure>
-											<i class="fa-brands fa-facebook"></i>
-										</figure>
-
-										<span><a href="#">@home.express.bg</a></span>
-									</li>
-								</ul><!-- /.list-contacts -->
-
-								<div class="map">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5816.093287529142!2d27.920711000000004!3d43.208511!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4540be7144c17%3A0x4923296812daa8a8!2z0YPQuy4g4oCe0JzQsNC60LXQtNC-0L3QuNGP4oCcIDI50JAsIDkwMDIg0JLQsNGA0L3QsCDQptC10L3RgtGK0YAsINCS0LDRgNC90LA!5e0!3m2!1sbg!2sbg!4v1695902853897!5m2!1sbg!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-								</div><!-- /.map -->
-							</div><!-- /.section__content -->
-						</div><!-- /.grid__col grid__col-/-1of2 -->
-
-						<div class="grid__col grid__col--1of2 grid__col--tablet-full">
-							<h2 class="has-underline">Пишете ни</h2>
-
-							<p>Попълнете формата по-долу и задайте Вашия въпрос. Наш консултант ще се свърже с Вас в най-кратки срокове</p>
-
-							<div class="form">
-								<form action="?" method="post">
-									<div class="form__body">
-										<div class="form__row">
-											<label for="name" class="form__label">Вашето име <span class="form__asterisk">*</span></label>
-
-											<div class="form__controls">
-												<input type="text" name="name" id="name" class="field" required>
-											</div><!-- /.form__controls -->
-										</div><!-- /.form__row -->
-
-										<div class="form__row">
-											<label for="email" class="form__label">Вашият Email <span class="form__asterisk">*</span></label>
-
-											<div class="form__controls">
-												<input type="email" name="email" id="email" class="field" required>
-											</div><!-- /.form__controls -->
-										</div><!-- /.form__row -->
-
-										<div class="form__row">
-											<label for="phone" class="form__label">Телефон <span class="form__asterisk">*</span></label>
-
-											<div class="form__controls">
-												<input type="tel" name="phone" id="phone" class="field" required>
-											</div><!-- /.form__controls -->
-										</div><!-- /.form__row -->
-
-										<div class="form__row">
-											<label for="msg" class="form__label">Вашето съобщение</label>
-
-											<div class="form__controls">
-												<textarea name="msg" id="msg" class="field field--textarea"></textarea>
-											</div><!-- /.form__controls -->
-										</div><!-- /.form__row -->
-									</div><!-- /.form__body -->
-
-									<div class="form__actions">
-										<input type="submit" class="btn btn--dark form__btn" value="Изпрати">
-									</div><!-- /.form__actions -->
-								</form>
-							</div><!-- /.form -->
-						</div><!-- /.grid__col grid__col-/-1of2 -->
-					</div><!-- /.grid -->
-				</div><!-- /.shell -->
-			</section><!-- /.section -->
+			{{> contacts }}
 		</main><!-- /.main -->
 
 		{{> footer }}

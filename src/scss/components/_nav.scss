@@ -76,9 +76,10 @@
 		position: absolute;
 		top: 100%;
 		left: 0;
-		width: 100%;
+		right: 0;
+		width: 2rem;
 		height: 0.5rem;
-		margin-top: 0.6rem;
+		margin: 0.6rem auto 0;
 		background: $c-primary;
 		scale: 0 1;
 		transition: scale .3s;

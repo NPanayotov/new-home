@@ -10,3 +10,4 @@ import '/scss/style.scss';
 import './modules/btn-top.js'
 import './modules/nav-trigger.js'
 import './modules/animate-on-scroll.js'
+import './modules/popup-init.js'
