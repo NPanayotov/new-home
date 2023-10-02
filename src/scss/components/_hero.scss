@@ -83,3 +83,55 @@
 .hero--medium {
 	min-height: 60vh;
 }
+
+/*  Hero interactive  */
+
+.hero--interactive {
+	min-height: 80vh;
+
+	.hero__image img {
+		object-position: center center;
+	}
+
+	.hero__image-layers img,
+	.hero__image-layers {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+	}
+
+	.hero__image-layers img {
+		transition: opacity .3s;
+	}
+
+	.hero__image-layers img {
+		opacity: 0;
+	}
+
+	.hero__image-layers .is-visible {
+		opacity: 1;
+	}
+
+	.hero__inner {
+		position: absolute;
+		bottom: 1.5rem;
+		right: 0;
+		pointer-events: none;
+	}
+	.hero__content {
+		margin-left: auto;
+		background: rgba(0, 0, 0, .5);
+		padding: 2rem;
+		text-align: right;
+		max-width: 30rem;
+
+	}
+
+	h1 {
+		margin: 0;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}

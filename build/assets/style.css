@@ -1215,6 +1215,47 @@ blockquote:last-child {
 .hero--medium {
   min-height: 60vh;
 }
+/*  Hero interactive  */
+.hero--interactive {
+  min-height: 80vh;
+}
+.hero--interactive .hero__image img {
+  object-position: center center;
+}
+.hero--interactive .hero__image-layers img,
+.hero--interactive .hero__image-layers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hero--interactive .hero__image-layers img {
+  transition: opacity 0.3s;
+}
+.hero--interactive .hero__image-layers img {
+  opacity: 0;
+}
+.hero--interactive .hero__image-layers .is-visible {
+  opacity: 1;
+}
+.hero--interactive .hero__inner {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0;
+  pointer-events: none;
+}
+.hero--interactive .hero__content {
+  margin-left: auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  text-align: right;
+  max-width: 30rem;
+}
+.hero--interactive h1 {
+  margin: 0;
+}
+.hero--interactive p {
+  margin-bottom: 0;
+}
 /* ------------------------------------------------------------ *\
 	List-bullets
 \* ------------------------------------------------------------ */
