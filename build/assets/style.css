@@ -1219,24 +1219,6 @@ blockquote:last-child {
 .hero--interactive {
   min-height: 80vh;
 }
-.hero--interactive .hero__image img {
-  object-position: center center;
-}
-.hero--interactive .hero__image-layers img,
-.hero--interactive .hero__image-layers {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-.hero--interactive .hero__image-layers img {
-  transition: opacity 0.3s;
-}
-.hero--interactive .hero__image-layers img {
-  opacity: 0;
-}
-.hero--interactive .hero__image-layers .is-visible {
-  opacity: 1;
-}
 .hero--interactive .hero__inner {
   position: absolute;
   bottom: 1.5rem;
@@ -1255,6 +1237,29 @@ blockquote:last-child {
 }
 .hero--interactive p {
   margin-bottom: 0;
+}
+/* ------------------------------------------------------------ *\
+	Interactive-image
+\* ------------------------------------------------------------ */
+.interactive-image {
+  position: relative;
+}
+.interactive-image img {
+  object-position: center center;
+}
+.interactive-image .interactive-image__layers img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.interactive-image .interactive-image__layers .is-visible--alt,
+.interactive-image .interactive-image__layers .is-visible {
+  opacity: 1;
+}
+.interactive-image--white {
+  background: #fff;
 }
 /* ------------------------------------------------------------ *\
 	List-bullets
@@ -1381,6 +1386,13 @@ blockquote:last-child {
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
+}
+/* ------------------------------------------------------------ *\
+  mfp-interactive
+\* ------------------------------------------------------------ */
+.mfp-interactive.mfp-bg {
+  opacity: 1;
+  background: #282828;
 }
 /* ------------------------------------------------------------ *\
 	nav-trigger
@@ -1541,6 +1553,24 @@ blockquote:last-child {
   scale: 1.1;
 }
 /* ------------------------------------------------------------ *\
+	Popup
+\* ------------------------------------------------------------ */
+.popup {
+  display: flex;
+  align-items: flex-start;
+  color: #fff;
+  padding: 5rem;
+}
+.popup .popup__images,
+.popup .popup__content {
+  flex: 0 0 50%;
+}
+.popup .popup__content {
+  padding: 2.5rem;
+  position: sticky;
+  top: 0;
+}
+/* ------------------------------------------------------------ *\
 	Section
 \* ------------------------------------------------------------ */
 .section {
@@ -1689,7 +1719,7 @@ blockquote:last-child {
 .wrapper {
   position: relative;
   min-height: 100vh;
-  padding-top: 7rem;
+  padding-top: 9.4rem;
 }
 .wrapper .wrapper__actions {
   position: fixed;

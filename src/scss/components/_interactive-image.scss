@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ *\
+	Interactive-image
+\* ------------------------------------------------------------ */
+
+.interactive-image {
+	position: relative;
+
+	img {
+		object-position: center center;
+	}
+
+	.interactive-image__layers img {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity .3s;
+	}
+
+	.interactive-image__layers .is-visible--alt,
+	.interactive-image__layers .is-visible {
+		opacity: 1;
+	}
+
+}
+
+.interactive-image--white {
+	background: #fff;
+}

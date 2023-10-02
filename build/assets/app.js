@@ -3983,18 +3983,31 @@ $(".js-slider-gallery").each((idx, DOMnode) => {
   });
 });
 $("img[usemap]").rwdImageMaps();
-$(".js-imagemap").on("mouseenter", "area", function(evt) {
+$(".js-image-map").on("mouseenter", "area", function(evt) {
   const targetId = $(this).attr("href");
   $(targetId).addClass("is-visible").siblings().removeClass("is-visible");
 }).on("mouseleave", "area", function(evt) {
-  $(".hero__image-layers img").removeClass("is-visible");
+  $(".interactive-image__layers img").removeClass("is-visible");
 }).on("click", "area", function(evt) {
   const targetTab = $(this).data("url");
   $.magnificPopup.open({
     items: {
       src: targetTab
     },
-    type: "ajax"
+    alignTop: true,
+    mainClass: "mfp-interactive",
+    type: "ajax",
+    callbacks: {
+      ajaxContentAdded: function(evt2) {
+        $(this.content).find("img[usemap]").rwdImageMaps();
+        $(".js-image-map").on("mouseenter", "area", function(evt3) {
+          const targetId = $(this).attr("href");
+          $(targetId).addClass("is-visible--alt").siblings().removeClass("is-visible--alt");
+        }).on("mouseleave", "area", function(evt3) {
+          $(".interactive-image__layers img").removeClass("is-visible--alt");
+        });
+      }
+    }
   });
   evt.preventDefault();
 });

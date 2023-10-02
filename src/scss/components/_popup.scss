@@ -1,0 +1,21 @@
+/* ------------------------------------------------------------ *\
+	Popup
+\* ------------------------------------------------------------ */
+
+.popup {
+	display: flex;
+	align-items: flex-start;
+	color: #fff;
+	padding: 5rem;
+
+	.popup__images,
+	.popup__content {
+		flex: 0 0 50%;
+	}
+
+	.popup__content {
+		padding: 2.5rem;
+		position: sticky;
+		top: 0;
+	}
+}
