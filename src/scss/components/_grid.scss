@@ -52,4 +52,11 @@
 
 .grid--vertical-gap {
 	row-gap: 3rem;
+
+
+	.grid__col ~ .grid__col {
+		@include breakpoint-down(mobile) {
+			margin-top: 2rem;
+		}
+	}
 }

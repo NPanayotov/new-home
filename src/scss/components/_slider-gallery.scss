@@ -1,0 +1,93 @@
+/* ------------------------------------------------------------ *\
+	Slider-gallery
+\* ------------------------------------------------------------ */
+
+.slider-gallery {
+	.slider__clip {
+		position: relative;
+	}
+
+	.slider__slide img {
+		aspect-ratio: 16 / 9;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.tns-nav {
+		position: absolute;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.tns-controls {
+		position: absolute;
+		top: 50%;
+		left: 1.5rem;
+		right: 1.5rem;
+		z-index: 10;
+		display: flex;
+		pointer-events: none;
+		justify-content: space-between;
+		translate: 0 -50%;
+	}
+
+	.tns-controls button {
+		background: none;
+		border: none;
+		font-size: 0;
+		color: #fff;
+		pointer-events: all;
+		transition: color .3s;
+
+		&:hover {
+			color: $c-primary;
+		}
+	}
+
+	.tns-controls button:before {
+		font-size: 3.6rem;
+		font-family: $ff-font-awesome-free;
+		font-weight: 900;
+
+	}
+
+	.tns-controls [data-controls="prev"]:before {
+		content: '\f053';
+	}
+	.tns-controls [data-controls="next"]:before {
+		content: '\f054';
+	}
+
+	.slider__thumbs {
+		background: #242424;
+	}
+
+	.slider__thumbs .slider__clip {
+		padding: 1rem 2rem 2rem;
+	}
+	.slider__thumbs .slider__slide {
+		width: 12.8rem;
+		opacity: .5;
+		cursor: pointer;
+		transition: opacity .3s;
+	}
+
+	.slider__thumbs .slider__slide:hover,
+	.slider__thumbs .is-current {
+		opacity: 1;
+	}
+
+	.slider__thumbs .slider__slide img {
+		aspect-ratio: 128 / 80;
+	}
+
+	.slider__thumbs .tns-controls {
+		padding-top: 0.4rem;
+		left: 0.3rem;
+		right: 0.3rem;
+	}
+
+	.slider__thumbs .tns-controls button:before {
+		font-size: 2rem;
+	}
+}

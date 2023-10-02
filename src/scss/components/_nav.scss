@@ -89,9 +89,12 @@
 		}
 	}
 
+	.is-active a {
+		color: $c-primary;
+	}
+
 	@media (hover: hover) {
-		a:where(:hover, :focus-visible),
-		.is-active a {
+		a:where(:hover, :focus-visible) {
 			color: $c-primary;
 		}
 

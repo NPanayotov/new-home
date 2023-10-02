@@ -1,0 +1,17 @@
+/* ------------------------------------------------------------ *\
+	Popup-image
+\* ------------------------------------------------------------ */
+
+.popup-image {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		transition: scale .3s;
+	}
+
+	&:where(:hover) img {
+		scale: 1.1;
+	}
+}

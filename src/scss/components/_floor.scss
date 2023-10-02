@@ -6,6 +6,16 @@
 	font-size: 1.4rem;
 	line-height: 1.4;
 
+	@include breakpoint-down(mobile) {
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	@include breakpoint-down(mobile) {
+		margin-bottom: 2rem;
+	}
+
 	.floor__image {
 		border: 1px solid $c-primary;
 		margin-bottom: 2rem;
@@ -15,5 +25,18 @@
 	.floor__image img {
 		aspect-ratio: 360 / 258;
 		object-fit: cover;
+	}
+
+	.floor__content {
+		@include breakpoint-down(mobile) {
+			display: contents;
+		}
+	}
+
+	h4 {
+		margin-bottom: 3rem;
+		@include breakpoint-down(mobile) {
+			order: -1;
+		}
 	}
 }
