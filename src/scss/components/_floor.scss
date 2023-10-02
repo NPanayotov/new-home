@@ -35,6 +35,7 @@
 
 	h4 {
 		margin-bottom: 3rem;
+
 		@include breakpoint-down(mobile) {
 			order: -1;
 		}
