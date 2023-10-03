@@ -28,6 +28,10 @@
 				text-decoration: underline;
 			}
 		}
+
+		@include breakpoint-down(mobile) {
+			padding: 1rem;
+		}
 	}
 
 	.is-current a {

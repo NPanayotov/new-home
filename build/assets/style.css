@@ -857,6 +857,11 @@ blockquote:last-child {
 .appartement h5 {
   margin-bottom: 1rem;
 }
+@media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
+  .appartement h5 {
+    margin-bottom: 0;
+  }
+}
 /* ------------------------------------------------------------ *\
 	Breadcrumbs
 \* ------------------------------------------------------------ */
@@ -1277,6 +1282,11 @@ blockquote:last-child {
 .hero--interactive {
   min-height: 80vh;
 }
+@media (max-width: 1023px) {
+  .hero--interactive {
+    min-height: 50vh;
+  }
+}
 .hero--interactive .hero__inner {
   position: absolute;
   bottom: 1.5rem;
@@ -1289,6 +1299,9 @@ blockquote:last-child {
   padding: 2rem;
   text-align: right;
   max-width: 30rem;
+}
+.hero--interactive .hero__image img {
+  object-position: center center;
 }
 .hero--interactive h1 {
   margin: 0;
@@ -1484,6 +1497,11 @@ blockquote:last-child {
     text-decoration: underline;
   }
 }
+@media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
+  .nav-floors a {
+    padding: 1rem;
+  }
+}
 .nav-floors .is-current a {
   background: #a5bb82;
   color: #000;
@@ -1561,7 +1579,7 @@ blockquote:last-child {
     background: rgba(0, 0, 0, 0.6);
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.3s 0s;
+    transition: opacity 0.3s;
   }
 }
 @media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
@@ -1572,7 +1590,6 @@ blockquote:last-child {
 }
 .nav.is-visible:after {
   opacity: 1;
-  transition-delay: 0.3s;
 }
 .nav ul {
   list-style: none;
@@ -1655,8 +1672,24 @@ blockquote:last-child {
   color: #fff;
   padding: 5rem;
 }
+@media (max-width: 1023px) {
+  .popup {
+    flex-direction: column-reverse;
+    padding: 3rem;
+  }
+}
 .popup .popup__images {
   pointer-events: none;
+}
+@media (max-width: 1023px) {
+  .popup .popup__images {
+    padding: 0 2.5rem;
+  }
+}
+@media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
+  .popup .popup__images {
+    padding: 0.5rem;
+  }
 }
 .popup .popup__images,
 .popup .popup__content {
@@ -1666,6 +1699,16 @@ blockquote:last-child {
   padding: 2.5rem;
   position: sticky;
   top: 0;
+}
+@media (max-width: 1023px) {
+  .popup .popup__content {
+    position: static;
+  }
+}
+@media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
+  .popup .popup__content {
+    padding: 1.5rem;
+  }
 }
 .popup .popup__head {
   display: flex;

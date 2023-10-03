@@ -8,8 +8,21 @@
 	color: #fff;
 	padding: 5rem;
 
+	@include breakpoint-down(tablet) {
+		flex-direction: column-reverse;
+		padding: 3rem;
+	}
+
 	.popup__images {
 		pointer-events: none;
+
+		@include breakpoint-down(tablet) {
+			padding: 0 2.5rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 0.5rem;
+		}
 	}
 
 	.popup__images,
@@ -21,6 +34,14 @@
 		padding: 2.5rem;
 		position: sticky;
 		top: 0;
+
+		@include breakpoint-down(tablet) {
+			position: static;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 1.5rem;
+		}
 	}
 
 	.popup__head {

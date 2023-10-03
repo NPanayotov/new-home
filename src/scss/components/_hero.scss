@@ -89,6 +89,10 @@
 .hero--interactive {
 	min-height: 80vh;
 
+	@include breakpoint-down(tablet) {
+		min-height: 50vh;
+	}
+
 	.hero__inner {
 		position: absolute;
 		bottom: 1.5rem;
@@ -101,7 +105,10 @@
 		padding: 2rem;
 		text-align: right;
 		max-width: 30rem;
+	}
 
+	.hero__image img {
+		object-position: center center;
 	}
 
 	h1 {
