@@ -1670,7 +1670,7 @@ blockquote:last-child {
   display: flex;
   align-items: flex-start;
   color: #fff;
-  padding: 5rem;
+  padding: 3rem;
 }
 @media (max-width: 1023px) {
   .popup {
@@ -1773,9 +1773,12 @@ blockquote:last-child {
   position: relative;
 }
 .slider-gallery .slider__slide img {
-  aspect-ratio: 16/9;
+  width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.slider-gallery .slider__slide {
+  aspect-ratio: 16/9;
 }
 .slider-gallery .tns-nav {
   position: absolute;
@@ -1831,7 +1834,7 @@ blockquote:last-child {
 .slider-gallery .slider__thumbs .is-current {
   opacity: 1;
 }
-.slider-gallery .slider__thumbs .slider__slide img {
+.slider-gallery .slider__thumbs .slider__slide {
   aspect-ratio: 128/80;
 }
 .slider-gallery .slider__thumbs .tns-controls {
