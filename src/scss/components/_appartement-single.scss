@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------ *\
+	appartement-single
+\* ------------------------------------------------------------ */
+
+.appartement-single {
+	display: none;
+
+	h3 {
+		margin-bottom: 1rem;
+	}
+
+	.appartement__head {
+		padding: 1.5rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.appartement__image {
+		border-radius: 1rem;
+		background: #fff;
+		padding: 3rem;
+		text-align: center;
+		margin: 0 1.5rem;
+	}
+
+	.appartement__image img {
+		max-width: 60%;
+	}
+}

@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------ *\
+	appartement
+\* ------------------------------------------------------------ */
+
+.appartements {
+	list-style: none;
+}
+
+.appartement {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem;
+	border-bottom: 1px solid #5f5f62;
+	cursor: pointer;
+	transition: background .3s;
+
+	@media (hover: hover) {
+		&:where(:hover, :focus-visible) {
+			background: #3c3c3c;
+		}
+	}
+
+	h5 {
+		margin-bottom: 1rem;
+	}
+}

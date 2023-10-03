@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------ *\
+	nav-floors
+\* ------------------------------------------------------------ */
+
+.nav-floors {
+	list-style: none;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: #5f5f62;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem;
+	margin-top: 3rem;
+
+	ul {
+		display: flex;
+
+	}
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+		padding: 1rem 1.5rem;
+
+		@media (hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.is-current a {
+		background: $c-primary;
+		color: #000;
+	}
+}

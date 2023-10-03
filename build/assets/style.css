@@ -646,6 +646,12 @@ blockquote:last-child {
 /* ------------------------------------------------------------ *\
   Helpers
 \* ------------------------------------------------------------ */
+.text-green {
+  color: #4fa62c;
+}
+.text-red {
+  color: #e02d2d;
+}
 .fa-facebook {
   color: #4267B2;
 }
@@ -804,6 +810,54 @@ blockquote:last-child {
   translate: none;
 }
 /* ------------------------------------------------------------ *\
+	appartement-single
+\* ------------------------------------------------------------ */
+.appartement-single {
+  display: none;
+}
+.appartement-single h3 {
+  margin-bottom: 1rem;
+}
+.appartement-single .appartement__head {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.appartement-single .appartement__image {
+  border-radius: 1rem;
+  background: #fff;
+  padding: 3rem;
+  text-align: center;
+  margin: 0 1.5rem;
+}
+.appartement-single .appartement__image img {
+  max-width: 60%;
+}
+/* ------------------------------------------------------------ *\
+	appartement
+\* ------------------------------------------------------------ */
+.appartements {
+  list-style: none;
+}
+.appartement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #5f5f62;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+@media (hover: hover) {
+  .appartement:where(:hover, :focus-visible) {
+    background: #3c3c3c;
+  }
+}
+.appartement h5 {
+  margin-bottom: 1rem;
+}
+/* ------------------------------------------------------------ *\
 	Breadcrumbs
 \* ------------------------------------------------------------ */
 .breadcrumbs {
@@ -886,6 +940,10 @@ blockquote:last-child {
   .btn--dark:where(:hover, :focus-visible) {
     background: #000;
   }
+}
+.btn--small {
+  padding: 1.5rem;
+  font-size: 1.4rem;
 }
 /*  Btn block  */
 .btn--block {
@@ -1394,6 +1452,42 @@ blockquote:last-child {
   opacity: 1;
   background: #282828;
 }
+.mfp-interactive .mfp-close {
+  color: #fff;
+  opacity: 1;
+  font-size: 50px;
+}
+/* ------------------------------------------------------------ *\
+	nav-floors
+\* ------------------------------------------------------------ */
+.nav-floors {
+  list-style: none;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #5f5f62;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+.nav-floors ul {
+  display: flex;
+}
+.nav-floors a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+}
+@media (hover: hover) {
+  .nav-floors a:hover {
+    text-decoration: underline;
+  }
+}
+.nav-floors .is-current a {
+  background: #a5bb82;
+  color: #000;
+}
 /* ------------------------------------------------------------ *\
 	nav-trigger
 \* ------------------------------------------------------------ */
@@ -1561,6 +1655,9 @@ blockquote:last-child {
   color: #fff;
   padding: 5rem;
 }
+.popup .popup__images {
+  pointer-events: none;
+}
 .popup .popup__images,
 .popup .popup__content {
   flex: 0 0 50%;
@@ -1569,6 +1666,11 @@ blockquote:last-child {
   padding: 2.5rem;
   position: sticky;
   top: 0;
+}
+.popup .popup__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 /* ------------------------------------------------------------ *\
 	Section
@@ -1712,6 +1814,32 @@ blockquote:last-child {
 }
 .socials a:where(:hover, :focus-visible) {
   scale: 1.1;
+}
+/* ------------------------------------------------------------ *\
+	Status
+\* ------------------------------------------------------------ */
+.status {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+}
+.status--green {
+  background: #4fa62c;
+}
+.status--red {
+  background: #e02d2d;
+}
+/* ------------------------------------------------------------ *\
+	Table info
+\* ------------------------------------------------------------ */
+.table-info td {
+  padding: 1.5rem;
+  border-bottom: 1px solid #5f5f62;
+}
+.table-info td:nth-child(2) {
+  text-align: right;
 }
 /* ------------------------------------------------------------ *\
 	Wrapper

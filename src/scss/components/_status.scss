@@ -1,0 +1,19 @@
+/* ------------------------------------------------------------ *\
+	Status
+\* ------------------------------------------------------------ */
+
+.status {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1.3rem;
+	height: 1.3rem;
+	border-radius: 50%;
+}
+
+.status--green {
+	background: #4fa62c;
+}
+
+.status--red {
+	background: #e02d2d;
+}

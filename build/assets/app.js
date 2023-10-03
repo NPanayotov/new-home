@@ -3982,7 +3982,45 @@ $(".js-slider-gallery").each((idx, DOMnode) => {
     mainSlider.goTo(nextIndex);
   });
 });
+const handleAppartementTabs = () => {
+  $(".js-appartement-tabs").on("click", ".appartement", function() {
+    const targetId = $(this).data("target");
+    const $target = $(targetId);
+    $target.stop().slideToggle("slow").siblings().slideUp();
+  });
+};
+const handleNavFloors = () => {
+  $(".js-nav-floors a").magnificPopup({
+    type: "ajax"
+  });
+};
 $("img[usemap]").rwdImageMaps();
+const openInteractivePopup = (url) => {
+  $.magnificPopup.open({
+    items: {
+      src: url
+    },
+    alignTop: true,
+    mainClass: "mfp-interactive",
+    type: "ajax",
+    callbacks: {
+      ajaxContentAdded: function(evt) {
+        handleAppartementTabs();
+        handleNavFloors();
+        $(this.content).find("img[usemap]").rwdImageMaps();
+        $(".js-image-map").on("mouseenter", "area", function(evt2) {
+          const targetId = $(this).attr("href");
+          $(targetId).addClass("is-visible--alt").siblings().removeClass("is-visible--alt");
+        }).on("mouseleave", "area", function(evt2) {
+          $(".interactive-image__layers img").removeClass("is-visible--alt");
+        });
+      },
+      close: function() {
+        $("img[usemap]").rwdImageMaps();
+      }
+    }
+  });
+};
 $(".js-image-map").on("mouseenter", "area", function(evt) {
   const targetId = $(this).attr("href");
   $(targetId).addClass("is-visible").siblings().removeClass("is-visible");
@@ -3990,24 +4028,6 @@ $(".js-image-map").on("mouseenter", "area", function(evt) {
   $(".interactive-image__layers img").removeClass("is-visible");
 }).on("click", "area", function(evt) {
   const targetTab = $(this).data("url");
-  $.magnificPopup.open({
-    items: {
-      src: targetTab
-    },
-    alignTop: true,
-    mainClass: "mfp-interactive",
-    type: "ajax",
-    callbacks: {
-      ajaxContentAdded: function(evt2) {
-        $(this.content).find("img[usemap]").rwdImageMaps();
-        $(".js-image-map").on("mouseenter", "area", function(evt3) {
-          const targetId = $(this).attr("href");
-          $(targetId).addClass("is-visible--alt").siblings().removeClass("is-visible--alt");
-        }).on("mouseleave", "area", function(evt3) {
-          $(".interactive-image__layers img").removeClass("is-visible--alt");
-        });
-      }
-    }
-  });
+  openInteractivePopup(targetTab);
   evt.preventDefault();
 });

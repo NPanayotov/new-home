@@ -8,6 +8,10 @@
 	color: #fff;
 	padding: 5rem;
 
+	.popup__images {
+		pointer-events: none;
+	}
+
 	.popup__images,
 	.popup__content {
 		flex: 0 0 50%;
@@ -17,5 +21,11 @@
 		padding: 2.5rem;
 		position: sticky;
 		top: 0;
+	}
+
+	.popup__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
 	}
 }

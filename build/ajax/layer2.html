@@ -1,14 +1,40 @@
 <div class="popup">
-	<div class="popup__image">
-		<img src="assets/images/temp/parter.jpg" alt="Popup image">
+	<div class="popup__images">
+		<div class="interactive-image">
+			<img src="assets/images/temp/hero-six.jpg" alt="Hero image" usemap="#imagemap">
+
+			<map name="imagemap" class="js-image-map">
+				<area target="" alt="layer1" title="Parter" data-url="./ajax/layer1.html" href="#layer1" coords="515,878,662,1077,1463,1073,1902,775,1612,612" shape="poly">
+				<area target="" alt="layer2" title="Floor 1" data-url="./ajax/layer2.html" href="#layer2" coords="484,641,545,719,1390,559,1395,473,544,598,484,546" shape="poly">
+				<area target="" alt="layer3" title="Floor 2" data-url="./ajax/layer3.html" href="#layer3" coords="486,539,542,593,1397,463,1407,356,532,448,477,419" shape="poly">
+				<area target="" alt="layer4" title="Floor 3" data-url="./ajax/layer4.html" href="#layer4" coords="459,261,511,293,1415,225,1407,349,522,437,474,409" shape="poly">
+			</map>
+
+			<div class="interactive-image__layers">
+				<img src="assets/images/layer1.png" id="layer1" alt="Layer1">
+				<img src="assets/images/layer2.png" class="is-visible" id="layer2" alt="Layer2">
+				<img src="assets/images/layer3.png" id="layer3" alt="Layer3">
+				<img src="assets/images/layer4.png" id="layer4" alt="Layer4">
+			</div><!-- /.interactive__layers -->
+		</div><!-- /.interactive-image -->
+
+		<div class="interactive-image interactive-image--white">
+			<img src="assets/images/temp/floor1.png" alt="Floor image">
+		</div><!-- /.interactive-image -->
 	</div><!-- /.popup__image -->
 
 	<div class="popup__content">
-		<h4 class="has-underline">Партер</h4><!-- /.has-underline -->
+		<div class="popup__head">
+			<h4 class="has-underline">Етаж 1</h4><!-- /.has-underline -->
+
+			<a href="assets/pdf/et1.pdf" target="_blank" class="btn btn--small btn--white">Изтегли PDF план</a>
+		</div><!-- /.popup__head -->
 
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat natus reprehenderit in tenetur deserunt, laudantium vitae ullam eligendi labore tempore delectus, dolores quia dolorem facilis quis magni possimus minus atque?</p>
 
 		<nav class="nav-floors js-nav-floors">
+			<span>Етаж</span>
+
 			<ul>
 				<li>
 					<a href="./ajax/layer1.html">Партер</a>
@@ -28,30 +54,192 @@
 			</ul>
 		</nav><!-- /.nav -->
 
-		<ul class="appartments">
-			<li class="appartment">
-				<div class="appartment__content">
+		<ul class="appartements js-appartement-tabs">
+			<li class="appartement" data-target="#app1">
+				<div class="appartement__content">
 					<h5>Апартамент 1</h5>
 
 					<span>тристаен</span>
-				</div><!-- /.appartment__content -->
+				</div><!-- /.appartement__content -->
 
-				<div class="appartment__aside">
+				<div class="appartement__aside">
 					<span class="status status--green"></span>
-				</div><!-- /.appartment__aside -->
+				</div><!-- /.appartement__aside -->
 			</li>
 
-			<li class="appartment">
-				<div class="appartment__content">
+			<li class="appartement" data-target="#app2">
+				<div class="appartement__content">
 					<h5>Апартамент 2</h5>
 
 					<span>тристаен</span>
-				</div><!-- /.appartment__content -->
+				</div><!-- /.appartement__content -->
 
-				<div class="appartment__aside">
+				<div class="appartement__aside">
 					<span class="status status--red"></span>
-				</div><!-- /.appartment__aside -->
+				</div><!-- /.appartement__aside -->
 			</li>
 		</ul><!-- /.list-appartments -->
+
+		<div class="appartement-tabs">
+			<div class="appartement-single" id="app1">
+				<div class="appartement__head">
+					<div class="appartement__head-inner">
+						<h3 class="has-underline">Апартамент 1</h4>
+
+						<p>Етаж 1</p>
+					</div><!-- /.appartement__head-inner -->
+
+					<div class="appartement__actions">
+						<a href="assets/pdf/app1.pdf" target="_blank" class="btn btn--small btn--white">Изтегли PDF план</a>
+					</div><!-- /.appartement__actions -->
+				</div><!-- /.appartement__head -->
+
+				<div class="appartement__body">
+					<div class="appartement__image">
+						<img src="assets/images/temp/app1-plan.png" alt="">
+					</div><!-- /.appartement__image -->
+
+					<div class="table-info">
+						<table>
+							<tr>
+								<td>Тип</td>
+
+								<td>Тристаен</td>
+							</tr>
+
+							<tr>
+								<td>Изложение</td>
+
+								<td>Юг, Изток, Север</td>
+							</tr>
+
+							<tr>
+								<td>Спални</td>
+
+								<td>2</td>
+							</tr>
+
+							<tr>
+								<td>Застроена площ</td>
+
+								<td>164.41 кв. м </td>
+							</tr>
+
+							<tr>
+								<td>Общи части</td>
+
+								<td>21.98 кв. м</td>
+							</tr>
+
+							<tr>
+								<td>Обща площ</td>
+
+								<td>208.07 кв. м</td>
+							</tr>
+
+							<tr>
+								<td>€/кв. м</td>
+
+								<td>1 569 € </td>
+							</tr>
+
+							<tr>
+								<td>Цена</td>
+
+								<td>326 500 €</td>
+							</tr>
+
+							<tr>
+								<td>Статус</td>
+
+								<td>
+									<span class="text-green">Продава се</span>
+								</td>
+							</tr>
+						</table>
+					</div><!-- /.table -->
+				</div><!-- /.appartement__body -->
+			</div><!-- /.appartement-tab -->
+
+			<div class="appartement-single" id="app2">
+				<div class="appartement__head">
+					<div class="appartement__head-inner">
+						<h3 class="has-underline">Апартамент 2</h4>
+
+						<p>Етаж 1</p>
+					</div><!-- /.appartement__head-inner -->
+
+					<div class="appartement__actions">
+						<a href="assets/pdf/app2.pdf" target="_blank" class="btn btn--small btn--white">Изтегли PDF план</a>
+					</div><!-- /.appartement__actions -->
+				</div><!-- /.appartement__head -->
+
+				<div class="appartement__body">
+					<div class="appartement__image">
+						<img src="assets/images/temp/app2-plan.png" alt="">
+					</div><!-- /.appartement__image -->
+
+					<div class="table-info">
+						<table>
+							<tr>
+								<td>Тип</td>
+
+								<td>Тристаен</td>
+							</tr>
+
+							<tr>
+								<td>Изложение</td>
+
+								<td>Юг, Изток, Север</td>
+							</tr>
+
+							<tr>
+								<td>Спални</td>
+
+								<td>2</td>
+							</tr>
+
+							<tr>
+								<td>Застроена площ</td>
+
+								<td>164.41 кв. м </td>
+							</tr>
+
+							<tr>
+								<td>Общи части</td>
+
+								<td>21.98 кв. м</td>
+							</tr>
+
+							<tr>
+								<td>Обща площ</td>
+
+								<td>208.07 кв. м</td>
+							</tr>
+
+							<tr>
+								<td>€/кв. м</td>
+
+								<td>1 569 € </td>
+							</tr>
+
+							<tr>
+								<td>Цена</td>
+
+								<td>326 500 €</td>
+							</tr>
+
+							<tr>
+								<td>Статус</td>
+
+								<td>
+									<span class="text-red">Продаден</span>
+								</td>
+							</tr>
+						</table>
+					</div><!-- /.table -->
+				</div><!-- /.appartement__body -->
+			</div><!-- /.appartement-tab -->
+		</div><!-- /.appartement-tabs -->
 	</div><!-- /.popup__content -->
 </div><!-- /.popup -->
