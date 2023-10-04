@@ -144,9 +144,19 @@
 			
 							<p>Попълнете формата по-долу и задайте Вашия въпрос. Наш консултант ще се свърже с Вас в най-кратки срокове</p>
 			
-							<div class="form">
+							<div class="form js-contact-form">
+							    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+			
 								<form action="?" method="post">
 									<div class="form__body">
+										<div class="form__row hidden">
+											<label for="hp" class="form__label">HP</label>
+			
+											<div class="form__controls">
+												<input type="text" name="hp" id="hp" class="field js-hp">
+											</div><!-- /.form__controls -->
+										</div><!-- /.form__row -->
+			
 										<div class="form__row">
 											<label for="name" class="form__label">Вашето име <span class="form__asterisk">*</span></label>
 			
@@ -181,8 +191,22 @@
 									</div><!-- /.form__body -->
 			
 									<div class="form__actions">
-										<input type="submit" class="btn btn--dark form__btn" value="Изпрати">
+										<button type="submit" class="btn btn--dark form__btn">
+											<span>Изпрати</span>
+										</button>
 									</div><!-- /.form__actions -->
+			
+									<div class="form__notice">
+										<h5>Благодарим ви!</h5>
+			
+										<p>Вашето съобщение беше изпратено успешно. Ще се свържем с вас при първа възможност.</p>
+									</div><!-- /.form__notice -->
+			
+									<div class="form__error">
+										<h5>Възникна грешка 😞</h5>
+			
+										<p>Моля опитайте отново или се свържете с нас по някой от другите ни канали за комуникация.</p>
+									</div><!-- /.form__notice -->
 								</form>
 							</div><!-- /.form -->
 						</div><!-- /.grid__col grid__col-/-1of2 -->

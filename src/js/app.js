@@ -15,3 +15,6 @@ import './modules/sliders.js'
 import './modules/interactive-popup.js'
 import './modules/appartement-tabs.js'
 import './modules/nav-floors.js'
+import './modules/handle-contact-form.js'
+
+

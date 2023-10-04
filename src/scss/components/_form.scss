@@ -22,5 +22,63 @@
 
 	.form__body {
 		margin-bottom: 2rem;
+		transition: opacity .3s;
+	}
+
+	.form__actions {
+		transition: opacity .3s;
+	}
+
+	.form__btn {
+		min-width: 123px;
+		position: relative;
+	}
+
+	.form__btn:after {
+		content: '\f110';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-family: $ff-font-awesome-free;
+		font-weight: 900;
+		font-size: 2.5rem;
+		color: $c-primary;
+		opacity: 0;
+		translate: -50% -50%;
+		animation: rotate 2s infinite linear;
+	}
+
+	.form__btn span {
+		transition: opacity .3s;
+	}
+
+	.form__error,
+	.form__notice {
+		display: none;
+	}
+
+	&.is-sending .form__actions,
+	&.is-sending .form__body {
+		opacity: .8;
+		pointer-events: none;
+	}
+
+	&.is-sending .form__btn:after {
+		opacity: 1;
+	}
+
+	&.is-sending .form__btn span {
+		opacity: 0;
+	}
+
+	&:where(.has-sent, .has-error) .form__body,
+	&:where(.has-sent, .has-error) .form__actions {
+		display: none;
+	}
+
+	&.has-sent .form__notice,
+	&.has-error .form__error {
+		display: block;
 	}
 }
+
