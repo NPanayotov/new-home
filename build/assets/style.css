@@ -1210,7 +1210,7 @@ blockquote:last-child {
 }
 .grid .grid__col {
   max-width: 100%;
-  flex: 1;
+  flex: 0 0 100%;
   padding: 0 1.5rem;
 }
 .grid .grid__col--1of2 {
