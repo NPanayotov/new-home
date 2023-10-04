@@ -16,7 +16,8 @@ const openInteractivePopup = (url) => {
 			src: url
 		},
 		alignTop: true,
-		mainClass: 'mfp-interactive',
+		mainClass: 'mfp-interactive mfp-fade',
+		removalDelay: 300,
 		type: 'ajax',
 		callbacks: {
 			ajaxContentAdded: function(evt) {

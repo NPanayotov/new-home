@@ -32,16 +32,34 @@
   opacity: 0;
 }
 
+.mfp-figure {
+  background: #fff;
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  right: auto;
+  left: 100%;
+  width: auto;
+  margin-left: 15px;
+}
+
+img.mfp-img {
+  padding: 0;
+}
+
 
 /* ------------------------------------------------------------ *\
   mfp-interactive
 \* ------------------------------------------------------------ */
 
 .mfp-interactive.mfp-bg {
-  opacity: 1;
   background: #282828;
 }
 
+.mfp-interactive.mfp-bg.mfp-ready {
+  opacity: 1;
+}
 
 .mfp-interactive .mfp-close {
   color: #fff;
