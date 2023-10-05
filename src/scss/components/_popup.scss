@@ -13,6 +13,10 @@
 		padding: 3rem;
 	}
 
+	@include breakpoint-down(mobile) {
+		padding: 3rem 0;
+	}
+
 	.popup__images {
 		pointer-events: none;
 

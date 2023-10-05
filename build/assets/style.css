@@ -1745,6 +1745,11 @@ img.mfp-img {
     padding: 3rem;
   }
 }
+@media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
+  .popup {
+    padding: 3rem 0;
+  }
+}
 .popup .popup__images {
   pointer-events: none;
 }
