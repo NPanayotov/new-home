@@ -1201,6 +1201,7 @@ blockquote:last-child {
   margin-inline: -1.5rem;
   /*  Grid col 1of2  */
   /*  Grid col 1of3  */
+  /*  Grid col 1of3  */
   /*  Grid col 1of4  */
 }
 @media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
@@ -1218,6 +1219,9 @@ blockquote:last-child {
 }
 .grid .grid__col--1of3 {
   flex: 0 0 33.3333333333%;
+}
+.grid .grid__col--2of3 {
+  flex: 0 0 66.6666666667%;
 }
 .grid .grid__col--1of4 {
   flex: 0 0 25%;
