@@ -4032,6 +4032,11 @@ $(".js-image-map").on("mouseenter", "area", function(evt) {
   openInteractivePopup(targetTab);
   evt.preventDefault();
 });
+$(".js-interactive-popup").on("click", function(evt) {
+  const targetTab = $(this).attr("href");
+  openInteractivePopup(targetTab);
+  evt.preventDefault();
+});
 const initEmailJs = () => {
   let emailjs = window.emailjs;
   if (emailjs === void 0) {

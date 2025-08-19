@@ -10,6 +10,18 @@
 	color: #e02d2d;
 }
 
+.text-fancy {
+	font-family: $ff-fency;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2rem;
+}
+
+.text-fancy h4 {
+	color: $c-primary;
+	font-size: 4rem;
+}
+
 .fa-facebook {
 	color: #4267B2;
 }

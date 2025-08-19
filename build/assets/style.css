@@ -652,6 +652,16 @@ blockquote:last-child {
 .text-red {
   color: #e02d2d;
 }
+.text-fancy {
+  font-family: "Lobster", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+.text-fancy h4 {
+  color: #a5bb82;
+  font-size: 4rem;
+}
 .fa-facebook {
   color: #4267B2;
 }

@@ -57,3 +57,12 @@ $('.js-image-map').on('mouseenter', 'area', function(evt) {
 
 	evt.preventDefault();
 });
+
+
+$('.js-interactive-popup').on('click', function(evt) {
+	const targetTab = $(this).attr('href');
+
+	openInteractivePopup(targetTab);
+
+	evt.preventDefault();
+})
