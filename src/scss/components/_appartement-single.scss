@@ -21,10 +21,15 @@
 		background: #fff;
 		padding: 3rem;
 		text-align: center;
-		margin: 0 1.5rem;
+		margin: 1.5rem 1.5rem 0;
 	}
 
 	.appartement__image img {
 		max-width: 60%;
+	}
+
+	.appartement__body {
+		display: flex;
+		flex-direction: column-reverse;
 	}
 }

@@ -3986,7 +3986,9 @@ const handleAppartementTabs = () => {
   $(".js-appartement-tabs").on("click", ".appartement", function() {
     const targetId = $(this).data("target");
     const $target = $(targetId);
-    $target.stop().slideToggle("slow").siblings().slideUp();
+    $target.stop().slideToggle("slow", function() {
+      $target[0].scrollIntoView({ behavior: "smooth" });
+    }).siblings().slideUp();
   });
 };
 const handleNavFloors = () => {
@@ -4033,8 +4035,16 @@ $(".js-image-map").on("mouseenter", "area", function(evt) {
   evt.preventDefault();
 });
 $(".js-interactive-popup").on("click", function(evt) {
-  const targetTab = $(this).attr("href");
+  const $this = $(this);
+  const targetTab = $this.attr("href");
+  const targetAppartmentID = $this.data("app");
   openInteractivePopup(targetTab);
+  setTimeout(() => {
+    const $targetAppartment = $(targetAppartmentID);
+    $targetAppartment.stop().slideToggle("slow", function() {
+      $targetAppartment[0].scrollIntoView({ behavior: "smooth", inline: "end" });
+    }).siblings().slideUp();
+  }, 400);
   evt.preventDefault();
 });
 const initEmailJs = () => {
