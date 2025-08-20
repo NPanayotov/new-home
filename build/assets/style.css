@@ -1075,7 +1075,7 @@ blockquote:last-child {
 }
 .floor .floor__image img {
   aspect-ratio: 360/258;
-  object-fit: cover;
+  object-fit: contain;
 }
 @media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
   .floor .floor__content {

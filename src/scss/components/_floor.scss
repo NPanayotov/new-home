@@ -24,7 +24,7 @@
 
 	.floor__image img {
 		aspect-ratio: 360 / 258;
-		object-fit: cover;
+		object-fit: contain;
 	}
 
 	.floor__content {
