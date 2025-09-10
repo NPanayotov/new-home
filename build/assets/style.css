@@ -1795,6 +1795,7 @@ img.mfp-img {
 @media (max-width: 1023px) {
   .popup .popup__content {
     position: static;
+    width: 100%;
   }
 }
 @media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {

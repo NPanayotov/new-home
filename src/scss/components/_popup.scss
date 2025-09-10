@@ -41,6 +41,7 @@
 
 		@include breakpoint-down(tablet) {
 			position: static;
+			width: 100%;
 		}
 
 		@include breakpoint-down(mobile) {
