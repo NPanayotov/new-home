@@ -652,6 +652,9 @@ blockquote:last-child {
 .text-red {
   color: #e02d2d;
 }
+.text-yellow {
+  color: #ffff00;
+}
 .text-fancy {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
@@ -1969,6 +1972,9 @@ img.mfp-img {
 }
 .status--red {
   background: #e02d2d;
+}
+.status--yellow {
+  background: #ffff00;
 }
 /* ------------------------------------------------------------ *\
 	Table info
