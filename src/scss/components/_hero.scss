@@ -87,10 +87,13 @@
 /*  Hero interactive  */
 
 .hero--interactive {
-	min-height: 80vh;
+	min-height: 900px;
+	height: 100vh;
+	max-height: 1080px;
 
 	@include breakpoint-down(tablet) {
 		min-height: 50vh;
+		height: auto;
 	}
 
 	.hero__inner {

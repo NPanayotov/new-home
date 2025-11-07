@@ -25,7 +25,7 @@ const openInteractivePopup = (url) => {
 				handleAppartementTabs();
 				handleNavFloors();
 
-				$(this.content).find('img[usemap]').rwdImageMaps();
+				//$(this.content).find('img[usemap]').rwdImageMaps();
 
 				$('.js-image-map').on('mouseenter', 'area', function(evt) {
 					const targetId = $(this).attr('href');
@@ -37,7 +37,7 @@ const openInteractivePopup = (url) => {
 				});
 			},
 			close: function() {
-				$('img[usemap]').rwdImageMaps();
+				//$('img[usemap]').rwdImageMaps();
 			}
 		}
 	})

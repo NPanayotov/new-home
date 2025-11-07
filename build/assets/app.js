@@ -4010,7 +4010,6 @@ const openInteractivePopup = (url) => {
       ajaxContentAdded: function(evt) {
         handleAppartementTabs();
         handleNavFloors();
-        $(this.content).find("img[usemap]").rwdImageMaps();
         $(".js-image-map").on("mouseenter", "area", function(evt2) {
           const targetId = $(this).attr("href");
           $(targetId).addClass("is-visible--alt").siblings().removeClass("is-visible--alt");
@@ -4019,7 +4018,6 @@ const openInteractivePopup = (url) => {
         });
       },
       close: function() {
-        $("img[usemap]").rwdImageMaps();
       }
     }
   });
